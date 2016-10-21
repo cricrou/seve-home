@@ -1,0 +1,9 @@
+<md-toolbar>
+  <template
+    ngFor [ngForOf]="menuItems"
+    let-menuItem="$implicit">
+    <span>
+      <a [href]="menuItem.navigationLink">{{menuItem.navigationTitle}}</a>
+    </span>
+  </template>
+</md-toolbar>
