@@ -19,9 +19,14 @@ export class MenuItemsService {
     return this.http.get(this.menuUrl + '8').map(this.extractData).catch(this.handleError);
   }
 
-  private extractData (res: Response) {
+  private extractData (res: Response):MenuItem[] {
     let body = res.json();
-    return body.data || { };
+    console.log("Passage par mis", body, res);
+
+    if (body && body.items) {
+      return body.items;
+    }
+    return [];
   }
 
   private handleError (error: any) {

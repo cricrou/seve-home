@@ -1,9 +1,3 @@
 export class MenuItem {
-    constructor (private _navigationTitle: string, public order: number, public navigationLink: string){
-
-    }
-
-    get navigationTitle(): string {
-        return this._navigationTitle;
-    }
+    constructor (public title: string, public order: number, public url: string){ }
 }

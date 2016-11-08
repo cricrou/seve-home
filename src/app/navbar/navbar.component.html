@@ -3,7 +3,7 @@
     ngFor [ngForOf]="menuItems"
     let-menuItem="$implicit">
     <span>
-      <a [href]="menuItem.navigationLink">{{menuItem.navigationTitle}}</a>
+      <a [href]="menuItem.url">{{menuItem.title}}</a>
     </span>
   </template>
 </md-toolbar>
